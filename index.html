@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,3 +51,54 @@
       height: 30px;
     }
     .card span {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ffffffcc;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="lang-toggle" onclick="toggleLang()">EN</button>
+  <div class="container">
+    <h1 id="title">ENCUÉNTRAME EN LAS REDES SOCIALES</h1>
+    <a class="card" href="https://www.instagram.com/shacra____/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+      <span id="insta">SÍGUEME EN INSTAGRAM</span>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61551670936615" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      <span id="face">ENCUÉNTRAME EN FACEBOOK</span>
+    </a>
+    <a class="card" href="https://www.tiktok.com/@shacra.by.isacar?_t=8pTlA3OyvSQ&_r=1" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+      <span id="tiktok">MIRA MIS TIKTOKS</span>
+    </a>
+    <a class="card" href="https://shacrabyisacar.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Web">
+      <span id="web">VISITA MI PÁGINA OFICIAL</span>
+    </a>
+  </div>
+  <script>
+    let isSpanish = true;
+    function toggleLang() {
+      isSpanish = !isSpanish;
+      document.querySelector(".lang-toggle").textContent = isSpanish ? "EN" : "ES";
+      document.getElementById("title").textContent = isSpanish ? "ENCUÉNTRAME EN LAS REDES SOCIALES" : "FIND ME ON SOCIAL MEDIA";
+      document.getElementById("insta").textContent = isSpanish ? "SÍGUEME EN INSTAGRAM" : "FOLLOW ME ON INSTAGRAM";
+      document.getElementById("face").textContent = isSpanish ? "ENCUÉNTRAME EN FACEBOOK" : "FIND ME ON FACEBOOK";
+      document.getElementById("tiktok").textContent = isSpanish ? "MIRA MIS TIKTOKS" : "WATCH MY TIKTOKS";
+      document.getElementById("web").textContent = isSpanish ? "VISITA MI PÁGINA OFICIAL" : "VISIT MY OFFICIAL WEBSITE";
+    }
+  </script>
+</body>
+</html>
